@@ -1,3 +1,4 @@
+import ActivityCategory from './functionBased/ActivityCategory';
 import SearchInput from './functionBased/SearchInput';
 
 
