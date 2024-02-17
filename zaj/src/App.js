@@ -1,10 +1,8 @@
-import ActivityCategory from './functionBased/ActivityCategory';
-import SearchInput from './functionBased/SearchInput';
-
+import ActivityTableView from "./functionBased/ActivityTableView";
 
 function App() {
   return (
-   <SearchInput/>
+    <ActivityTableView/>
   );
 
 }
