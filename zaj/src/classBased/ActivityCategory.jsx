@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class ActivityCategory extends Component {
+export default class ActivityCategory extends Component {
     render(){
         return (
             <tr>

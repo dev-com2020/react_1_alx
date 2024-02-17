@@ -10,10 +10,10 @@ export default function ActivityTable(){
                 <th>Available</th>
             </thead>
         <tbody>
-            <ActivityCategory/>
+            <ActivityCategory category='Art'/>
             <ActivityRow/>
 
-            <ActivityCategory/>
+            <ActivityCategory category='Sport'/>
             <ActivityRow/>
             <ActivityRow/>
         </tbody>
