@@ -12,6 +12,10 @@ export default function ActivityTable(){
         <tbody>
             <ActivityCategory/>
             <ActivityRow/>
+
+            <ActivityCategory/>
+            <ActivityRow/>
+            <ActivityRow/>
         </tbody>
         </table>
     )
