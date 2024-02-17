@@ -1,9 +1,9 @@
-export default function ActivityCategory(props) {
-    console.log("PROPS", props)
+export default function ActivityCategory({category}) {
+    // console.log("PROPS", props)
     return (
         <tr>
             <td>
-                {props.category}
+                {category}
             </td>
         </tr>
     )
