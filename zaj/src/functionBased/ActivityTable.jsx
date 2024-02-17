@@ -1,13 +1,20 @@
+import { Fragment } from "react";
 import ActivityCategory from "./ActivityCategory";
 import ActivityRow from "./ActivityRow";
 
-export default function ActivityTable(){
+export default function ActivityTable({ activities }) {
 
-    const activity = {
-        name: "Swimming",
-        duration:5,
-        done: false
-    }
+    const groupedActivites = {};
+
+    activities.forEach(activity => {
+        if (!groupedActivites[activity.category]) {
+            groupedActivites[activity.category] = [];
+        }
+        groupedActivites[activity.category].push(activity);
+
+    });
+
+
     return (
         <table>
             <thead>
@@ -15,14 +22,18 @@ export default function ActivityTable(){
                 <th>Duration</th>
                 <th>Available</th>
             </thead>
-        <tbody>
-            <ActivityCategory category='Art'/>
-            <ActivityRow activity={activity}/>
-
-            <ActivityCategory category='Sport'/>
-            <ActivityRow activity={activity}/>
-            <ActivityRow activity={activity}/>
-        </tbody>
+            <tbody>
+                {
+                    Object.keys(groupedActivites).map(category => (
+                        <Fragment key={category}>
+                            <ActivityCategory category={category} />
+                            {groupedActivites[category].map((activity, index) => (
+                                <ActivityRow key={index} activity={activity} />
+                            ))}
+                        </Fragment>
+                     ) )
+                }
+            </tbody>
         </table>
     )
 }
