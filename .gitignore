@@ -1,0 +1,43 @@
+# Zależności
+/node_modules
+
+# Środowisko uruchomieniowe
+/.pnp
+.pnp.js
+
+# Pliki konfiguracyjne IDE
+/.idea
+.vscode
+
+# Logi
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+/build
+
+# Pliki .env
+.env
+.env.test
+.env.production
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local History for Visual Studio Code
+.history/
+
+# Misc
+.DS_Store
+.TSBuildInfo
+
+# Test directories
+/jest
+/coverage
+
+# System Files
+.DS_Store
+Thumbs.db
