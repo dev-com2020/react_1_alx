@@ -12,5 +12,12 @@ let total: number = calculateTotalPrice({name: "test", unitPrice: 1}, 1, 0.1);
 
 let flag = false
 
+let table = {name: "Table", unitPrice: 450}
+table.name = "Tomek"
+
+const tabela : {name: string, unitPrice?: number} = {
+    name: "Table",
+}
+
 
 
