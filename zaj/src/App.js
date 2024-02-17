@@ -1,8 +1,9 @@
+import SearchInput from './functionBased/SearchInput';
 
 
 function App() {
   return (
-    <p>Hello react</p>
+   <SearchInput/>
   );
 
 }
