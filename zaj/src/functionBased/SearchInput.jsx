@@ -1,16 +1,16 @@
 import { useState } from "react"
 
-export default function SearchInput() {
+export default function SearchInput({ filterText, onFilterTextChange }) {
 
-    const [filterText,setFilterText] = useState('');
+    // const [filterText,setFilterText] = useState('');
 
     const handleChange = (e) => {
-        setFilterText(e.target.value)
+        onFilterTextChange(e.target.value)
     }
     return (
         <form>
-            <input type="text" value={filterText} placeholder="Search..." 
-            onChange={handleChange}/>
+            <input type="text" value={filterText} placeholder="Search..."
+                onChange={handleChange} />
         </form>
     )
 }

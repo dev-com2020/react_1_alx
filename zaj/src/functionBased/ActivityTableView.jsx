@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ActivityTable from "./ActivityTable"
 import SearchInput from "./SearchInput"
 
@@ -12,10 +13,11 @@ const ACTIVITIES = [
 
 
 export default function ActivityTableView(){
+    const [filterText, setFilterText] = useState('')
 
     return (
         <div>
-            <SearchInput />
+            <SearchInput filterText={filterText} onFilterTextChange={setFilterText}/>
             <ActivityTable activities={ACTIVITIES}/>
         </div>
     )
