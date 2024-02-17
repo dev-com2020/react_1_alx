@@ -15,10 +15,14 @@ const ACTIVITIES = [
 export default function ActivityTableView(){
     const [filterText, setFilterText] = useState('')
 
+    const filteredActivities = ACTIVITIES.filter(activity =>
+        activity.name.toLowerCase().includes(filterText.toLowerCase())
+        )
+
     return (
         <div>
             <SearchInput filterText={filterText} onFilterTextChange={setFilterText}/>
-            <ActivityTable activities={ACTIVITIES}/>
+            <ActivityTable activities={filteredActivities}/>
         </div>
     )
 }
