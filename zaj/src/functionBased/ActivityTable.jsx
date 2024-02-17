@@ -37,3 +37,11 @@ export default function ActivityTable({ activities }) {
         </table>
     )
 }
+
+// Kod tworzy obiekt groupedActivities, który służy do grupowania aktywności według ich kategorii.
+
+// Pętla forEach przechodzi przez każdą aktywność w tablicy activities. Dla każdej aktywności sprawdza, czy jej kategoria już istnieje jako klucz w obiekcie groupedActivities. Jeśli nie, tworzy nową tablicę dla tej kategorii.
+
+// Następnie, niezależnie od tego, czy tablica dla danej kategorii już istniała, kod dodaje aktywność do odpowiedniej tablicy w groupedActivities.
+
+// W efekcie, groupedActivities staje się obiektem, gdzie klucze to kategorie, a wartości to tablice aktywności należących do tych kategorii.
