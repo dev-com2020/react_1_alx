@@ -2,6 +2,12 @@ import ActivityCategory from "./ActivityCategory";
 import ActivityRow from "./ActivityRow";
 
 export default function ActivityTable(){
+
+    const activity = {
+        name: "Swimming",
+        duration:5,
+        done: false
+    }
     return (
         <table>
             <thead>
@@ -11,11 +17,11 @@ export default function ActivityTable(){
             </thead>
         <tbody>
             <ActivityCategory category='Art'/>
-            <ActivityRow/>
+            <ActivityRow activity={activity}/>
 
             <ActivityCategory category='Sport'/>
-            <ActivityRow/>
-            <ActivityRow/>
+            <ActivityRow activity={activity}/>
+            <ActivityRow activity={activity}/>
         </tbody>
         </table>
     )

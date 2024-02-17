@@ -1,9 +1,9 @@
-export default function ActivityRow(){
+export default function ActivityRow({ activity }) {
     return (
         <tr>
-            <td> Aktywność </td>
-            <td> 5 h</td>
-            <td> Finished </td>
+            <td>{activity.name}</td>
+            <td> {activity.duration} h</td>
+            <td> {activity.done ? 'Done': 'Not started'} </td>
             <td>
                 <button>Show Details</button>
             </td>
