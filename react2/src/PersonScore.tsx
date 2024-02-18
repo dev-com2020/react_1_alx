@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useRef } from "react"
+import { useEffect, useMemo, useReducer, useRef } from "react"
 import { getPerson } from "./getPerson"
 
 type State = {
@@ -66,6 +66,8 @@ export function PersonScore() {
             addButtonRef.current?.focus()
         }
     },[loading])
+    const expensiveCalculation = useMemo(
+        () => sillyExpensiveFunction(),[])
     if (loading) {
         return <div>Loading...</div>
     }
@@ -74,6 +76,7 @@ export function PersonScore() {
             <h3>
                 {name}, {score}
             </h3>
+            <p>{expensiveCalculation}</p>
             <button
             ref={addButtonRef}
             onClick={() => dispatch({ type: 'incement' })}>Add</button>
