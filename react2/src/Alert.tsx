@@ -1,7 +1,8 @@
 /**@jsxImportSource @emotion/react */
 import { useState } from "react";
 import { css } from '@emotion/react'
-import { ReactComponentElement as InfoIcon } from "./info.svg"
+import { ReactComponent as InfoIcon } from './icons8-info.svg'; // Import the InfoIcon component
+
 
 type Props = {
     type?: string
@@ -34,8 +35,9 @@ export function Alert({ type = 'information',
         background-color: ${type === 'warning' ? "#f3e8da" : "#dcf1f3"};
         `}
         >
+
             <div css={css`
-            font-weight: bold;
+                font-weight: bold;
             `}>
                 <span role="img"
                     aria-label={type === 'warning' ? 'Warning' : 'Information'}>
