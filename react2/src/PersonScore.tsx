@@ -1,6 +1,5 @@
-import { useEffect, useReducer, useState } from "react"
+import { useEffect, useReducer, useRef } from "react"
 import { getPerson } from "./getPerson"
-import { act } from "react-dom/test-utils"
 
 type State = {
     name: string | undefined
@@ -47,11 +46,17 @@ export function PersonScore() {
             loading: true
         }
     )
+    const addButtonRef = useRef<HTMLButtonElement>(null)
     useEffect(() => {
         getPerson().then(({ name }) =>
             dispatch({ type: 'initialize', name })
         )
     }, [])
+    useEffect(()=>{
+        if (!loading) {
+            addButtonRef.current?.focus()
+        }
+    },[loading])
     if (loading) {
         return <div>Loading...</div>
     }
@@ -60,7 +65,9 @@ export function PersonScore() {
             <h3>
                 {name}, {score}
             </h3>
-            <button onClick={() => dispatch({ type: 'incement' })}>Add</button>
+            <button
+            ref={addButtonRef}
+            onClick={() => dispatch({ type: 'incement' })}>Add</button>
             <button onClick={() => dispatch({ type: 'decrement' })}>Substract</button>
             <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
         </div>
