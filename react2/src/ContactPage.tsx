@@ -29,14 +29,15 @@ export function ContactPage() {
                     <input type="text" id="name"
                     value={contact.name}
                     onChange={(e) =>
-                    setContact({...contact, name: e.target.value})}/>
+                    setContact({...contact, name: e.target.value})} required/>
                 </div>
                 <div className={fieldStyle}>
                     <label htmlFor="email">Email:</label>
                     <input type="email" id="email"
                     value={contact.email}
                     onChange={(e) =>
-                    setContact({...contact, email: e.target.value})}/>
+                    setContact({...contact, email: e.target.value})} required
+                    pattern="\S+@\S+\.\S+"/>
                 </div>
                 <div className={fieldStyle}> 
                     <label htmlFor="reason">Powód kontaktu:</label>
