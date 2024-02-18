@@ -1,12 +1,15 @@
-// import { Alert } from './II/Alert';
 import './App.css';
-// import { PersonScore } from './PersonScore';
+import { Header } from './Headers';
+import { Outlet } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-     {/* <Alert heading='Success' closable>Wszystko wygląda w porządku!</Alert> */}
-     {/* <PersonScore/> */}
+     <>
+     <Header/>
+     <Outlet/>
+     </>
     </div>
   );
 }

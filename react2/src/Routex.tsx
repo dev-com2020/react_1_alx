@@ -1,15 +1,17 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ProductsPage } from "./ProductsPage";
-import { Header } from "./Headers";
+import App from "./App";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Header />
-    }
-    ,{
-        path: 'products',
-        element: <ProductsPage />
+        element: <App />,
+        children: [
+            {
+                path: 'products',
+                element: <ProductsPage />
+            }
+        ]
     }
 ])
 
