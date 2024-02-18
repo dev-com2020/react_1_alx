@@ -5,6 +5,7 @@ import { ProductPage } from "./ProductPage";
 import { ErrorPage } from "./ErrorPage";
 import { HomePage } from "./HomePage";
 import { Suspense, lazy } from "react";
+import { ContactPage } from "./ContactPage";
 
 // lazy pages powinny być umieszczone na końcu importów
 const AdminPage = lazy(() => import('./AdminPage'))
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: 'products/:id',
                 element: <ProductPage/>
+            },
+            {
+                path: 'contact',
+                element: <ContactPage/>
             },
             {
                 path: 'admin',
