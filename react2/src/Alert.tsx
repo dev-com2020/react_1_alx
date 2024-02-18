@@ -43,7 +43,7 @@ export function Alert({ type = 'information',
                 <span className='header-text'>{heading}</span>
             </div>
         {closable && (
-            <button aria-label='Close' onClick={handleCloseClick}>
+            <button aria-label='Close' onClick={handleCloseClick} className="border-none rounded-md bg-emerald-700 text-white cursor-pointer shadow-2xl">
             <span role="img" aria-label='Close'>
             ❌
             </span>
