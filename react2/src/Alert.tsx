@@ -1,6 +1,6 @@
+/**@jsxImportSource @emotion/react */
 import { useState } from "react";
-import './Alert.css';
-// import styles from './Alert.module.css';
+import { css } from '@emotion/react'
 
 type Props = {
     type?: string
@@ -23,8 +23,19 @@ export function Alert({ type = 'information',
         }
     }
     return (
-        <div className={`container ${type}`}>
-            <div>
+        <div css={css`
+        text-align: center;
+        margin-top: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 10px 15px;
+        color: ${type === 'warning' ? "red": "blue"};
+        background-color: ${type === 'warning' ? "#f3e8da": "#dcf1f3"};
+        `}
+        >
+            <div css={css`
+            font-weight: bold;
+            `}>
                 <span role="img"
                     aria-label={type === 'warning' ? 'Warning' : 'Information'}>
                     {type === 'warning' ? '⚠' : 'i'}
