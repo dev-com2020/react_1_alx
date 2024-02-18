@@ -1,0 +1,26 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.container.warning {
+    color: red;
+    background-color: aquamarine;
+}
+
+.container.information {
+    color: blue;
+    background-color: bisque;
+}
+
+.content {
+    margin-left: 30px;
+    color: #000;
+}
+
+.header-text {
+    font-weight: bold;
+}

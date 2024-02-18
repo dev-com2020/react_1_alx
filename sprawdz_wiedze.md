@@ -31,3 +31,14 @@ export function ContactDetails({ firstName, email }: Props) {
 
 # ma być to fruits: string[]
 <FruitList fruits={["Banana", "Apple", "Strawberry"]} />;
+
+export function TextVanish({ text }: Props) {
+  const [textToRender, setTextToRender] = useState(text);
+  useEffect(() => {
+    setTimeout(() => setTextToRender(""), 5000);
+  }, []);
+  if (!text) {
+    return null;
+  }
+  return <span>{textToRender}</span>;
+}

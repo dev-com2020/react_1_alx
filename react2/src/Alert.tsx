@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useState } from "react";
+import './Alert.css';
+// import styles from './Alert.module.css';
 
 type Props = {
     type?: string
@@ -21,13 +23,13 @@ export function Alert({ type = 'information',
         }
     }
     return (
-        <div>
+        <div className={`container ${type}`}>
             <div>
                 <span role="img"
                     aria-label={type === 'warning' ? 'Warning' : 'Information'}>
                     {type === 'warning' ? '⚠' : 'i'}
                 </span>
-                <span>{heading}</span>
+                <span className='header-text'>{heading}</span>
             </div>
         {closable && (
             <button aria-label='Close' onClick={handleCloseClick}>
@@ -37,7 +39,7 @@ export function Alert({ type = 'information',
             </button>
         )
     }
-    <div>{children}</div>
+    <div className="content">{children}</div>
     </div>
     );
 }

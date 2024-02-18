@@ -1,12 +1,12 @@
-// import { Alert } from './Alert';
+import { Alert } from './Alert';
 import './App.css';
-import { PersonScore } from './PersonScore';
+// import { PersonScore } from './PersonScore';
 
 function App() {
   return (
     <div className="App">
-     {/* <Alert heading='Success' closable>Wszystko wygląda w porządku!</Alert> */}
-     <PersonScore/>
+     <Alert heading='Success' closable>Wszystko wygląda w porządku!</Alert>
+     {/* <PersonScore/> */}
     </div>
   );
 }
