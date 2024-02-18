@@ -22,6 +22,15 @@ type Action =
         type: 'reset'
     }
 
+function sillyExpensiveFunction(){
+    console.log("Uruchamiam silly exp fun")
+    let sum = 0
+    for (let i =0; i < 10000; i++){
+        sum += i
+    }
+    return sum
+}
+
 function reducer(state: State, action: Action): State {
     switch (action.type) {
         case 'initialize':
