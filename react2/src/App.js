@@ -1,4 +1,4 @@
-import { Alert } from './Alert';
+import { Alert } from './II/Alert';
 import './App.css';
 // import { PersonScore } from './PersonScore';
 
